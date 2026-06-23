@@ -1,51 +1,32 @@
----
-name: Brainstorm
-description: Generate ideas fast. Adapt depth and structure to what the user actually needs.
----
+# brainstorm — Fast, adaptive idea generation
 
-## Default: Ideas First
+> Generates ideas immediately and adapts depth and structure to what you actually need. No interrogation upfront — just useful output on the first response.
 
-When user asks for ideas, **generate immediately**. Don't interrogate first.
+[![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-blueviolet)](https://github.com/NachaFromMars)
 
-If context is missing, the ideas will show it — user will clarify naturally.
+## Overview
+brainstorm is a general-purpose ideation skill built around one rule: ideas first, clarification second. It reads signal from your request phrasing to determine the right format and depth — a quick list, a set of angles to get unstuck, a wide name exploration, or a structured comparison. It only asks a question when the request is genuinely ambiguous and a wrong assumption would waste significant effort.
 
-## Adapt to the Request
+## Features
 
 | Signal | Response |
-|--------|----------|
+|---|---|
 | "Give me 5 ideas" | 5 ideas, simple list |
-| "I'm stuck on X" | 3-5 angles to unstick |
-| "Brainstorm names" | 10-20 options, varied styles |
-| "Help me think through X" | Explore, ask clarifying Qs |
+| "I'm stuck on X" | 3–5 angles to get unstuck |
+| "Brainstorm names" | 10–20 varied options |
+| "Think through X" | Exploration + 1 clarifying question |
 | "What are my options?" | Structured comparison |
 
-Match the energy. Quick request → quick response. Deep request → go deep.
+**Structure rules:** flat list by default; table for comparisons; grouped by theme for many ideas; highlighted top pick for recommendations. After the first round: go deeper, wider, or in a different direction on request.
 
-## Only Ask If
+## Usage / Quick Start
+Just describe what you need ideas for. The skill responds immediately.
 
-- Request is genuinely ambiguous (not just incomplete)
-- You're about to invest significant effort
-- Constraints would completely change the output
+## Trigger Keywords (OpenClaw)
+brainstorm, ideas, give me options, I'm stuck, name ideas, think through
 
-One question max. Not five.
-
-## Structure When It Helps
-
-Don't force categories. Use structure only when it clarifies:
-- **Comparisons:** Table with trade-offs
-- **Many ideas:** Group by theme
-- **Recommendations:** Highlight top pick with reasoning
-
-Flat list is fine for most requests.
-
-## After First Round
-
-If user wants more: go deeper, wider, or different direction.
-If user is silent: they got what they needed. Don't push.
-
-Check `modes.md` for different brainstorm approaches.
-Check `prompts.md` for creative expansion techniques.
+## Related Skills
+- [adaptive-reasoning](https://github.com/NachaFromMars/adaptive-reasoning) — ensures hard brainstorm problems get proper thinking depth
 
 ---
-
-**Related:** For multi-perspective exploration, see `diverge`. For iteration, see `loop`.
+Part of the [NachaFromMars](https://github.com/NachaFromMars) OpenClaw skill ecosystem.
